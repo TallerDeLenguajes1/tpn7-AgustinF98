@@ -31,7 +31,13 @@ namespace Calculadora
 
         public float Division()
         {
-            return Num1 / Num2;
+            if(Num2 != 0)
+            {
+                return Num2 / Num1;
+            }else
+            {
+                return "No se puede dividir entre 0";
+            }
         }
     }
 }

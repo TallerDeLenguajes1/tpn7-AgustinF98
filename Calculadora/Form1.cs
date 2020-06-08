@@ -142,17 +142,10 @@ namespace Calculadora
                     tbMensaje.Text = Convert.ToString(Operacion.Multiplicacion());
                     break;
                 case '/':
-                    if (num2 != 0)
-                    {
-                        tbMensaje.Clear();
-                        Operacion.Num1 = num1;
-                        Operacion.Num2 = num2;
-                        tbMensaje.Text = Convert.ToString(Operacion.Division());
-                    }
-                    else
-                    {
-                        tbMensaje.Text = "No se puede dividir entre 0";
-                    }
+                    tbMensaje.Clear();
+                    Operacion.Num1 = num1;
+                    Operacion.Num2 = num2;
+                    tbMensaje.Text = Convert.ToString(Operacion.Division());
                     break;
             }
         }
