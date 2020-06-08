@@ -1,0 +1,10 @@
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\bin\Debug\Calculadora.exe
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\bin\Debug\Calculadora.pdb
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.csprojAssemblyReference.cache
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.exe
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.pdb
+C:\Repogit\tp7\tpn7-AgustinF98\Calculadora\obj\Debug\Calculadora.Calculadora.resources
