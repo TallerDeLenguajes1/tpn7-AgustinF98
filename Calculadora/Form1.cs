@@ -75,28 +75,28 @@ namespace Calculadora
         { 
             operador = Convert.ToChar("+");
             num1 = float.Parse(tbMensaje.Text);
-            tbMensaje.Clear();
+            tbMensaje.Text = tbMensaje.Text + " + ";
         }
 
         private void botonResta_Click(object sender, EventArgs e)
         {
             operador = Convert.ToChar("-");
             num1 = float.Parse(tbMensaje.Text);
-            tbMensaje.Clear();
+            tbMensaje.Text = tbMensaje.Text + " - ";
         }
 
         private void botonMultiplicacion_Click(object sender, EventArgs e)
         {
             operador = Convert.ToChar("*");
             num1 = float.Parse(tbMensaje.Text);
-            tbMensaje.Clear();
+            tbMensaje.Text = tbMensaje.Text + " * ";
         }
 
         private void botonDivision_Click(object sender, EventArgs e)
         {
             operador = Convert.ToChar("/");
             num1 = float.Parse(tbMensaje.Text);
-            tbMensaje.Clear();
+            tbMensaje.Text = tbMensaje.Text + " / ";
         }
 
         private void botonPunto_Click(object sender, EventArgs e)
@@ -118,33 +118,41 @@ namespace Calculadora
 
         private void botonIgual_Click(object sender, EventArgs e)
         {
-            num2 = float.Parse(tbMensaje.Text);
+            string[] separadorNum;
             Operacion = new Operaciones();
 
             switch (operador)
             {
                 case '+':
-                    tbMensaje.Clear();
+                    separadorNum = tbMensaje.Text.Split('+');
+                    num2 = float.Parse(separadorNum[1]);
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
+                    tbMensaje.Clear();
                     tbMensaje.Text = Convert.ToString(Operacion.Suma());
                     break;
                 case '-':
-                    tbMensaje.Clear();
+                    separadorNum = tbMensaje.Text.Split('-');
+                    num2 = float.Parse(separadorNum[1]);
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
+                    tbMensaje.Clear();
                     tbMensaje.Text = Convert.ToString(Operacion.Resta());
                     break;
                 case '*':
-                    tbMensaje.Clear();
+                    separadorNum = tbMensaje.Text.Split('*');
+                    num2 = float.Parse(separadorNum[1]);
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
+                    tbMensaje.Clear();
                     tbMensaje.Text = Convert.ToString(Operacion.Multiplicacion());
                     break;
                 case '/':
-                    tbMensaje.Clear();
+                    separadorNum = tbMensaje.Text.Split('/');
+                    num2 = float.Parse(separadorNum[1]);
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
+                    tbMensaje.Clear();
                     tbMensaje.Text = Convert.ToString(Operacion.Division());
                     break;
             }

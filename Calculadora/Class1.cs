@@ -33,10 +33,10 @@ namespace Calculadora
         {
             if(Num2 != 0)
             {
-                return Num2 / Num1;
+                return Num1 / Num2;
             }else
             {
-                return "No se puede dividir entre 0";
+                return -9999;
             }
         }
     }
