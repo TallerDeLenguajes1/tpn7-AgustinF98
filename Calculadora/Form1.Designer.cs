@@ -184,7 +184,7 @@
             this.botonPunto.Name = "botonPunto";
             this.botonPunto.Size = new System.Drawing.Size(44, 50);
             this.botonPunto.TabIndex = 13;
-            this.botonPunto.Text = ".";
+            this.botonPunto.Text = ",";
             this.botonPunto.UseVisualStyleBackColor = true;
             this.botonPunto.Click += new System.EventHandler(this.botonPunto_Click);
             // 
@@ -250,7 +250,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Calculadora";
             this.Text = "Calculadora";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,7 +12,7 @@ namespace Calculadora
 {
     public partial class Calculadora : Form
     {
-        float num1, num2;
+        float num1, num2, resultado;
         char operador;
         Operaciones Operacion;
 
@@ -23,52 +23,132 @@ namespace Calculadora
 
         private void boton0_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "0";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "0";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "0";
+            }
         }
 
         private void boton1_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "1";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "1";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "1";
+            }
         }
 
         private void boton2_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "2";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "2";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "2";
+            }
         }
 
         private void boton3_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "3";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "3";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "3";
+            }
         }
 
         private void boton4_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "4";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "4";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "4";
+            }
         }
 
         private void boton5_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "5";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "5";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "5";
+            }
         }
 
         private void boton6_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "6";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "6";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "6";
+            }
         }
 
         private void boton7_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "7";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "7";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "7";
+            }
         }
 
         private void boton8_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "8";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "8";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "8";
+            }
         }
 
         private void boton9_Click(object sender, EventArgs e)
         {
-            tbMensaje.Text = tbMensaje.Text + "9";
+            if (tbMensaje.Text == Convert.ToString(resultado))
+            {
+                tbMensaje.Clear();
+                tbMensaje.Text = tbMensaje.Text + "9";
+            }
+            else
+            {
+                tbMensaje.Text = tbMensaje.Text + "9";
+            }
         }
 
         private void botonSuma_Click(object sender, EventArgs e) 
@@ -101,13 +181,13 @@ namespace Calculadora
 
         private void botonPunto_Click(object sender, EventArgs e)
         {
-            if(tbMensaje.Text.EndsWith("."))
+            if(tbMensaje.Text.EndsWith(","))
             {
                 tbMensaje.Text = tbMensaje.Text;
             }
             else
             {
-                tbMensaje.Text = tbMensaje.Text + ".";
+                tbMensaje.Text = tbMensaje.Text + ",";
             }
         }
 
@@ -129,7 +209,8 @@ namespace Calculadora
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
                     tbMensaje.Clear();
-                    tbMensaje.Text = Convert.ToString(Operacion.Suma());
+                    resultado = Operacion.Suma();
+                    tbMensaje.Text = Convert.ToString(resultado);
                     break;
                 case '-':
                     separadorNum = tbMensaje.Text.Split('-');
@@ -137,7 +218,8 @@ namespace Calculadora
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
                     tbMensaje.Clear();
-                    tbMensaje.Text = Convert.ToString(Operacion.Resta());
+                    resultado = Operacion.Resta();
+                    tbMensaje.Text = Convert.ToString(resultado);
                     break;
                 case '*':
                     separadorNum = tbMensaje.Text.Split('*');
@@ -145,7 +227,8 @@ namespace Calculadora
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
                     tbMensaje.Clear();
-                    tbMensaje.Text = Convert.ToString(Operacion.Multiplicacion());
+                    resultado = Operacion.Multiplicacion();
+                    tbMensaje.Text = Convert.ToString(resultado);
                     break;
                 case '/':
                     separadorNum = tbMensaje.Text.Split('/');
@@ -153,14 +236,10 @@ namespace Calculadora
                     Operacion.Num1 = num1;
                     Operacion.Num2 = num2;
                     tbMensaje.Clear();
-                    tbMensaje.Text = Convert.ToString(Operacion.Division());
+                    resultado = Operacion.Division();
+                    tbMensaje.Text = Convert.ToString(resultado);
                     break;
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
